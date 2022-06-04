@@ -1,6 +1,6 @@
-﻿
+﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
 
-public class HotelLegsReponse
+public class HotelLegsReponse : BaseReponseDto
 {
     public Result[] results { get; set; }
 }

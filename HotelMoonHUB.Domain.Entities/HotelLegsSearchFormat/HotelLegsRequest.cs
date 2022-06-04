@@ -1,6 +1,6 @@
-﻿
+﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
 
-public class HotelLegsRequest
+public class HotelLegsRequest : BaseRequestDto
 {
     public int hotel { get; set; }
     public string checkInDate { get; set; }

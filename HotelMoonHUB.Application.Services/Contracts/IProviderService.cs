@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace HotelMoonHUB.Application.Services.Contracts
 {
     public interface IProviderService
     {
-        public void sendRequest();
+        Task<BaseReponseDto> Search(BaseRequestDto);
     }
 }
