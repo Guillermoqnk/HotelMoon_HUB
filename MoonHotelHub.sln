@@ -11,13 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Domain Layer", "3. Domai
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure Layer", "4. Infrastructure Layer", "{7234136D-8CAD-4D47-BE93-9EE390C1229C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Application.Services", "HotelMoonHUB.Application.Services\HotelMoonHUB.Application.Services.csproj", "{0EBDC182-EF0C-44DB-AB46-1C146AFD0F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.Application.Services", "HotelMoonHUB.Application.Services\HotelMoonHUB.Application.Services.csproj", "{0EBDC182-EF0C-44DB-AB46-1C146AFD0F71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Domain.Entities", "HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj", "{50C380E0-72C9-46AB-BC51-EE1A982A9778}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.Domain.Entities", "HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj", "{50C380E0-72C9-46AB-BC51-EE1A982A9778}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Infrastructure.SvcAgents", "HotelMoonHUB.Infrastructure.SvcAgents\HotelMoonHUB.Infrastructure.SvcAgents.csproj", "{3D3C9ED9-CC6C-4695-BC1A-9552BFCA8DF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.Infrastructure.SvcAgents", "HotelMoonHUB.Infrastructure.SvcAgents\HotelMoonHUB.Infrastructure.SvcAgents.csproj", "{3D3C9ED9-CC6C-4695-BC1A-9552BFCA8DF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.WebAPI.Services", "HotelMoonHUB.WebAPI.Services\HotelMoonHUB.WebAPI.Services.csproj", "{88A79024-8F36-4BB3-8C3F-7B13A7444132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.WebAPI.Services", "HotelMoonHUB.WebAPI.Services\HotelMoonHUB.WebAPI.Services.csproj", "{88A79024-8F36-4BB3-8C3F-7B13A7444132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelmoonHUB.Application.Dtos", "HotelmoonHUB.Application.Dtos\HotelmoonHUB.Application.Dtos.csproj", "{27C63342-7508-4957-A632-A6E90DB6FC70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{88A79024-8F36-4BB3-8C3F-7B13A7444132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88A79024-8F36-4BB3-8C3F-7B13A7444132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88A79024-8F36-4BB3-8C3F-7B13A7444132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C63342-7508-4957-A632-A6E90DB6FC70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C63342-7508-4957-A632-A6E90DB6FC70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C63342-7508-4957-A632-A6E90DB6FC70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C63342-7508-4957-A632-A6E90DB6FC70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{50C380E0-72C9-46AB-BC51-EE1A982A9778} = {09231E49-9D8F-4F40-97B5-B4280033AFB3}
 		{3D3C9ED9-CC6C-4695-BC1A-9552BFCA8DF0} = {7234136D-8CAD-4D47-BE93-9EE390C1229C}
 		{88A79024-8F36-4BB3-8C3F-7B13A7444132} = {8D2113B7-C9C2-46FF-84C2-F5C3518082E5}
+		{27C63342-7508-4957-A632-A6E90DB6FC70} = {647C0DC2-F25F-4CD0-90BB-192F3D4C6C4B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {583FD372-4314-467E-BE23-960B62C1D4E1}

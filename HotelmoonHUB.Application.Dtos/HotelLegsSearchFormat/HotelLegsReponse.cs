@@ -1,5 +1,7 @@
 ﻿
-public class HotelLegsReponse
+using HotelMoonHUB.Domain.Entities.BaseSearchFormat;
+
+public class HotelLegsReponse : BaseReponse
 {
     public Result[] results { get; set; }
 }

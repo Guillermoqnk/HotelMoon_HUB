@@ -8,7 +8,7 @@ namespace HotelMoonHUB.Application.Services.Configuration
     {
         public static IServiceCollection AddDependency(this IServiceCollection services)
         {
-            services.AddTransient<IProviderService, HotelLegsService>();
+            services.AddTransient<IHotelLegsService, HotelLegsService>();
 
             return services;
         }

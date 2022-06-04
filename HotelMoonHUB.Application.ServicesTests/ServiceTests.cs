@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelMoonHUB.Application.Services.Contracts
+namespace HotelMoonHUB.Application.ServicesTests
 {
-    public interface IProviderService
+    internal class ServiceTests
     {
-        public void sendRequest();
     }
 }
