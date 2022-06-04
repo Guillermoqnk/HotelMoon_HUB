@@ -1,5 +1,8 @@
 ﻿
-public class HotelLegsRequest
+
+using HotelmoonHUB.Domain.Entities;
+
+public class HotelLegsRequest : IBaseRequest
 {
     public int hotel { get; set; }
     public string checkInDate { get; set; }

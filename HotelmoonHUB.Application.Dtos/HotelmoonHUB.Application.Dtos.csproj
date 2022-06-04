@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj" />
-  </ItemGroup>
-
 </Project>
