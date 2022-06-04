@@ -1,6 +1,6 @@
-﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
+﻿using HotelmoonHUB.Domain.Entities;
 
-public class HotelLegsReponse : BaseReponseDto
+public class HotelLegsReponse : IBaseReponse
 {
     public Result[] results { get; set; }
 }
