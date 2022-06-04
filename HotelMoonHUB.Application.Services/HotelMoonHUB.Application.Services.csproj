@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HotelmoonHUB.Application.Dtos\HotelmoonHUB.Application.Dtos.csproj" />
+    <ProjectReference Include="..\HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

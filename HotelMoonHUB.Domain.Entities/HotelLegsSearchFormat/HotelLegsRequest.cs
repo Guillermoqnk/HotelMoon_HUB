@@ -1,6 +1,8 @@
-﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
+﻿
 
-public class HotelLegsRequest : BaseRequestDto
+using HotelmoonHUB.Domain.Entities;
+
+public class HotelLegsRequest : IBaseRequest
 {
     public int hotel { get; set; }
     public string checkInDate { get; set; }

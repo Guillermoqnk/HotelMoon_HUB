@@ -11,17 +11,16 @@ namespace HotelMoonHUB.Application.Services
 {
     public class Service
     {
-        private readonly IHotelLegsService _hotelLegsService;
-
-        public Service(IHotelLegsService hotelLegsService)
+        public async Task<HUBReponse> Search(HUBRequest request)
         {
-            _hotelLegsService = hotelLegsService;
-        }
+            HUBReponse reponse = new HUBReponse();
 
-        public void Search()
-        {
-            //Llamada a la lista
-            //Unificación de respuestas
+            foreach(IProviderService service in Providers.ProvidersList)
+            {
+                reponse = await service.Search(request , reponse);
+            }
+
+            return reponse;
         }
     }
 }

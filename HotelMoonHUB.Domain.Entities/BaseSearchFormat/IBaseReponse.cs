@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos
+namespace HotelmoonHUB.Domain.Entities
 {
-    public interface IBaseRequestDto
+    public interface IBaseReponse
     {
     }
 }

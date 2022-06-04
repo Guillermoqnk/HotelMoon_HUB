@@ -1,14 +1,10 @@
-﻿using HotelmoonHUB.Application.Dtos.BaseSearchFormatDtos;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HotelmoonHUB.Domain.Entities;
 
 namespace HotelMoonHUB.Application.Services.Contracts
 {
     public interface IProviderService
     {
-        Task<BaseReponseDto> Search(BaseRequestDto);
+        Task<IBaseReponse> Search(HUBRequest request);
+        Task<HUBReponse> AddData(HUBReponse hubReponse, IBaseReponse genericReponse);
     }
 }
