@@ -9,7 +9,7 @@ using HotelMoonHUB.Application.Services.Implementations;
 
 namespace HotelMoonHUB.Application.Services
 {
-    public class Service
+    public class Service : IService
     {
         public async Task<HUBReponse> Search(HUBRequest request)
         {
