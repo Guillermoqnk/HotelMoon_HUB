@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HotelmoonHUB.Application.Dtos\HotelmoonHUB.Application.Dtos.csproj" />
     <ProjectReference Include="..\HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj" />
+    <ProjectReference Include="..\HotelMoonHUB.Infrastructure.SvcAgents\HotelMoonHUB.Infrastructure.SvcAgents.csproj" />
   </ItemGroup>
 
 </Project>
