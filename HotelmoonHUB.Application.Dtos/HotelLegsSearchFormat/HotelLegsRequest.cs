@@ -1,7 +1,6 @@
 ﻿
-using HotelMoonHUB.Domain.Entities.BaseSearchFormat;
 
-public class HotelLegsRequest : BaseRequest
+public class HotelLegsRequest
 {
     public int hotel { get; set; }
     public string checkInDate { get; set; }
