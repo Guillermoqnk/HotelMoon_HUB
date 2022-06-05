@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelmoonHUB.Application.Dt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.WebAPI.Services", "HotelMoonHUB.WebAPI.Services\HotelMoonHUB.WebAPI.Services.csproj", "{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Application.ServicesTests", "HotelMoonHUB.Application.ServicesTests\HotelMoonHUB.Application.ServicesTests.csproj", "{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.Application.ServicesTests", "HotelMoonHUB.Application.ServicesTests\HotelMoonHUB.Application.ServicesTests.csproj", "{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

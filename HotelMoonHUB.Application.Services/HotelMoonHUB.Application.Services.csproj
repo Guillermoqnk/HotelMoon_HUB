@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.0.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.0.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 
@@ -14,6 +16,21 @@
     <ProjectReference Include="..\HotelmoonHUB.Application.Dtos\HotelmoonHUB.Application.Dtos.csproj" />
     <ProjectReference Include="..\HotelMoonHUB.Domain.Entities\HotelMoonHUB.Domain.Entities.csproj" />
     <ProjectReference Include="..\HotelMoonHUB.Infrastructure.SvcAgents\HotelMoonHUB.Infrastructure.SvcAgents.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Configuration\FluentValidations\FluentValidantionsMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FluentValidantionsMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Configuration\FluentValidations\FluentValidantionsMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FluentValidantionsMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

@@ -21,7 +21,9 @@ public static class FixtureData
 
     #endregion
 
+    #region HUBReponse_Null
     public static HUBReponse? hubReponse_null = null;
+    #endregion
 
     #region HUBReponse_Full
 
