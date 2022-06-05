@@ -5,8 +5,8 @@ using HotelMoonHUB.Application.Services.Implementations;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddTransient<IService, Service>();
-builder.Services.AddTransient<IHotelLegsService, HotelLegsService>();
+builder.Services.AddSingleton<IService, Service>();
+builder.Services.AddSingleton<IHotelLegsService, HotelLegsService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

@@ -1,5 +1,6 @@
 ﻿using HotelmoonHUB.Domain.Entities;
 using HotelMoonHUB.Application.Services.Contracts;
+using HotelMoonHUB.Infrastructure.SvcAgents;
 using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
 using System;
 using System.Collections.Generic;
@@ -11,19 +12,12 @@ namespace HotelMoonHUB.Application.Services.Implementations
 {
     public class HotelLegsService : IHotelLegsService
     {
-        private readonly IHotelLegsConnection _hotelLegsConnection;
-
-
-
-        public HotelLegsService(IHotelLegsConnection hotelLegsConnection)
-        {
-            _hotelLegsConnection = hotelLegsConnection;
-        }
-
-        private void AddToList()
+        public HotelLegsService()
         {
             Providers.ProvidersList.Add(this);
         }
+
+        HotelLegsConnection _hotelLegsConnection = new HotelLegsConnection();
 
         public async Task<HUBReponse> Search(HUBRequest request , HUBReponse hubReponse)
         {
