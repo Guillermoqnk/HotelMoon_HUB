@@ -4,7 +4,6 @@ namespace HotelMoonHUB.Application.Services.Contracts
 {
     public interface IProviderService
     {
-        Task<IBaseReponse> Search(HUBRequest request);
-        Task<HUBReponse> AddData(HUBReponse hubReponse, IBaseReponse genericReponse);
+        Task<HUBReponse> Search(HUBRequest request , HUBReponse hubReponse);
     }
 }

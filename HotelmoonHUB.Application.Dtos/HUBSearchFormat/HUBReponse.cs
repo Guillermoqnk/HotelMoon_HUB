@@ -7,7 +7,7 @@ public class HUBReponse
 public class Room
 {
     public int roomId { get; set; }
-    public Rate[] rates { get; set; }
+    public Rate[]? rates    { get; set; }
 }
 
 public class Rate

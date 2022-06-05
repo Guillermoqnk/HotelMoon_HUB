@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HotelMoonHUB.Application.Services.Contracts
 {
-    public interface IHotelLegsService : IProviderService
+    public interface IService
     {
+        Task<HUBReponse?> Search(HUBRequest request);
     }
 }
