@@ -25,6 +25,11 @@ namespace HotelMoonHUB.Application.Services.Implementations
 
         public async Task<HUBReponse> Search(HUBRequest request , HUBReponse hubReponse)
         {
+            if(request == null)
+                throw new ArgumentNullException(nameof(request));
+            if(hubReponse == null)
+                throw new ArgumentNullException(nameof(hubReponse));
+
             HotelLegsRequest hotelRequest = RequestHUBtoHotelLegs(request);
 
             var hotelReponse = await _hotelLegsConnection.Search(hotelRequest);
@@ -36,17 +41,22 @@ namespace HotelMoonHUB.Application.Services.Implementations
 
             foreach (Result r in hotelReponse.results)
             {
-                Room room = (Room)hubRooms.Where<Room>(f => f.roomId == r.room);
+                Room room;
 
-                if (room == null)
+                if (hubRooms.Where(f => f.roomId == r.room).Count() == 0)
                 {
                     Room newRoom = new Room()
                     {
                         roomId = r.room,
+                        rates = new Rate[0],
                     };
+
+                    hubRooms.Add(newRoom);
 
                     room = newRoom;
                 }
+
+                room = hubRooms.Where(f => f.roomId == r.room).First();
 
                 Rate actualRate = new Rate()
                 {
@@ -67,6 +77,9 @@ namespace HotelMoonHUB.Application.Services.Implementations
 
         public HotelLegsRequest RequestHUBtoHotelLegs(HUBRequest hubRequest)
         {
+            if(hubRequest == null)
+                throw new ArgumentNullException(nameof(hubRequest));
+
             HotelLegsRequest finalRequest = new HotelLegsRequest()
             {
                 hotel = hubRequest.hotelId,

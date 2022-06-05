@@ -54,6 +54,36 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
 
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(HUBReponse));
+            Assert.AreNotEqual(result.rooms.Length , 0);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public async Task HotelLegsService_SearchMethod_NullRequestParameter_BadPath()
+        {
+            var _hotelLegsConnection = new HotelLegsConnection();
+
+            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+
+            HUBReponse hubReponse = new HUBReponse()
+            {
+                rooms = new Room[0],
+            };
+
+            var result = await _hotelLegsService.Search(null, hubReponse);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public async Task HotelLegsService_SearchMethod_NullReponseParameter_BadPath()
+        {
+            var _hotelLegsConnection = new HotelLegsConnection();
+
+            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+
+            HUBReponse hubReponse = null;
+
+            var result = await _hotelLegsService.Search(FixtureData.hubRequest, hubReponse);
         }
     }
 }
