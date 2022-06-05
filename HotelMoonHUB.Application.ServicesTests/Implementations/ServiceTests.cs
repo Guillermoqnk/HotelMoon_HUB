@@ -19,7 +19,9 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         [TestMethod()]
         public async Task Service_SearchMethod_HappyPath()
         {
-            var Service = new Service();
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            var Service = new Service(_hotelLegsService);
 
             var result = await Service.Search(FixtureData.hubRequest);
 
@@ -31,7 +33,9 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         [ExpectedException(typeof(ArgumentNullException))]
         public async Task Service_SearchMethod_NoHubReponse_BadPath()
         {
-            var Service = new Service();
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            var Service = new Service(_hotelLegsService);
 
             var result = await Service.Search(FixtureData.hubRequest_Null);
 
@@ -41,9 +45,8 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         [TestMethod]
         public async Task HotelLegsService_SearchMethod_HappyPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
             
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = new HUBReponse()
             {
@@ -61,9 +64,7 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         [ExpectedException(typeof(ArgumentNullException))]
         public async Task HotelLegsService_SearchMethod_NullRequestParameter_BadPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
-
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = new HUBReponse()
             {
@@ -77,9 +78,7 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         [ExpectedException(typeof(ArgumentNullException))]
         public async Task HotelLegsService_SearchMethod_NullReponseParameter_BadPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
-
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = null;
 
