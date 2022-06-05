@@ -1,5 +1,6 @@
 ﻿using HotelmoonHUB.Domain.Entities;
 using HotelMoonHUB.Application.Services.Contracts;
+using HotelMoonHUB.Infrastructure.SvcAgents;
 using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
 using System;
 using System.Collections.Generic;
@@ -11,24 +12,18 @@ namespace HotelMoonHUB.Application.Services.Implementations
 {
     public class HotelLegsService : IHotelLegsService
     {
-        private readonly IHotelLegsConnection _hotelLegsConnection;
-
-
-
-        public HotelLegsService(IHotelLegsConnection hotelLegsConnection)
-        {
-            _hotelLegsConnection = hotelLegsConnection;
-        }
-
-        private void AddToList()
+        public HotelLegsService()
         {
             Providers.ProvidersList.Add(this);
         }
+
+        HotelLegsConnection _hotelLegsConnection = new HotelLegsConnection();
 
         public async Task<HUBReponse> Search(HUBRequest request , HUBReponse hubReponse)
         {
             if(request == null)
                 throw new ArgumentNullException(nameof(request));
+
             if(hubReponse == null)
                 throw new ArgumentNullException(nameof(hubReponse));
 
@@ -96,10 +91,18 @@ namespace HotelMoonHUB.Application.Services.Implementations
 
         public int nightsCalculator(HUBRequest hubRequest)
         {
+            if(hubRequest == null)
+                throw new ArgumentNullException(nameof(hubRequest));
+            
             string[] entry = hubRequest.checkIn.Split("-");
             string[] exit = hubRequest.checkOut.Split("-");
 
-            int totalNights = Convert.ToInt32(exit[2]) - Convert.ToInt32(entry[2]);
+            DateTime checkInDT = new DateTime(int.Parse(entry[0]), int.Parse(entry[1]), int.Parse(entry[2]));
+            DateTime checkOutDT = new DateTime(int.Parse(exit[0]), int.Parse(exit[1]), int.Parse(exit[2]));
+
+            TimeSpan daysDiff = checkOutDT - checkInDT;
+
+            int totalNights = daysDiff.Days;
 
             return totalNights;
         }
