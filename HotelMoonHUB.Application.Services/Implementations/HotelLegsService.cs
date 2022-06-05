@@ -80,7 +80,7 @@ namespace HotelMoonHUB.Application.Services.Implementations
             {
                 hotel = hubRequest.hotelId,
                 checkInDate = hubRequest.checkIn,
-                numberOfNights = nightsCalculator(hubRequest),
+                numberOfNights = NightsCalculator(hubRequest),
                 guests = hubRequest.numberOfGuests,
                 rooms = hubRequest.numberOfRooms,
                 currency = hubRequest.currency,
@@ -89,7 +89,7 @@ namespace HotelMoonHUB.Application.Services.Implementations
             return finalRequest;
         }
 
-        public int nightsCalculator(HUBRequest hubRequest)
+        public int NightsCalculator(HUBRequest hubRequest)
         {
             if(hubRequest == null)
                 throw new ArgumentNullException(nameof(hubRequest));

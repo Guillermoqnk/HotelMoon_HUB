@@ -17,9 +17,11 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
     public class ServiceTests
     {
         [TestMethod()]
-        public async Task Service_SearchMethod_HappyPath()
+        public async Task Integration_Service_SearchMethod_HappyPath()
         {
-            var Service = new Service();
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            var Service = new Service(_hotelLegsService);
 
             var result = await Service.Search(FixtureData.hubRequest);
 
@@ -29,9 +31,11 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public async Task Service_SearchMethod_NoHubReponse_BadPath()
+        public async Task Integration_Service_SearchMethod_NoHubReponse_BadPath()
         {
-            var Service = new Service();
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            var Service = new Service(_hotelLegsService);
 
             var result = await Service.Search(FixtureData.hubRequest_Null);
 
@@ -39,11 +43,150 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
         }
 
         [TestMethod]
-        public async Task HotelLegsService_SearchMethod_HappyPath()
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullHotelId_BadPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
-            
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                checkIn = "2022-2-12",
+                checkOut = "2022-2-15",
+                numberOfGuests = 3,
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullCheckIn_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkOut = "2022-2-15",
+                numberOfGuests = 3,
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullCheckOut_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-2-15",
+                numberOfGuests = 3,
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullNumberOfGuests_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-2-15",
+                checkOut = "2022-2-16",
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullNumberOfRooms_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-2-15",
+                checkOut = "2022-2-16",
+                numberOfGuests = 1,
+                currency = "EUR"
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NullCurrency_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-2-15",
+                checkOut = "2022-2-16",
+                numberOfRooms = 1,
+                numberOfGuests = 1,
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public async Task Integration_Service_SearchMethod_FluentValidationIsNotValid_NumberOfGuestsUnder0_BadPath()
+        {
+            HotelLegsService _hotelLegsService = new HotelLegsService();
+
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-2-15",
+                checkOut = "2022-2-16",
+                numberOfRooms = 1,
+                numberOfGuests = -1,
+                currency = "EUR",
+            };
+
+            var Service = new Service(_hotelLegsService);
+
+            var result = await Service.Search(hubRequest);
+        }
+
+        [TestMethod]
+        public async Task Integration_HotelLegsService_SearchMethod_HappyPath()
+        {
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = new HUBReponse()
             {
@@ -59,11 +202,9 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public async Task HotelLegsService_SearchMethod_NullRequestParameter_BadPath()
+        public async Task Integration_HotelLegsService_SearchMethod_NullRequestParameter_BadPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
-
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = new HUBReponse()
             {
@@ -75,15 +216,98 @@ namespace HotelMoonHUB.Application.Services.ApplicationTests
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public async Task HotelLegsService_SearchMethod_NullReponseParameter_BadPath()
+        public async Task Integration_HotelLegsService_SearchMethod_NullReponseParameter_BadPath()
         {
-            var _hotelLegsConnection = new HotelLegsConnection();
-
-            var _hotelLegsService = new HotelLegsService(_hotelLegsConnection);
+            var _hotelLegsService = new HotelLegsService();
 
             HUBReponse hubReponse = null;
 
             var result = await _hotelLegsService.Search(FixtureData.hubRequest, hubReponse);
+        }
+
+        [TestMethod]
+        public void Integration_HotelLegsService_NightsCalculatorMethod_DaysDiff_HappyPath()
+        {
+            var _hotelLegsService = new HotelLegsService();
+
+            var result = _hotelLegsService.NightsCalculator(FixtureData.hubRequest);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result , 3);
+        }
+
+        [TestMethod]
+        public void Integration_HotelLegsService_NightsCalculatorMethod_MonthDiff_HappyPath()
+        {
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-1-12",
+                checkOut = "2022-2-12",
+                numberOfGuests = 3,
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var _hotelLegsService = new HotelLegsService();
+
+
+            var result = _hotelLegsService.NightsCalculator(hubRequest);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result, 31);
+        }
+
+        [TestMethod]
+        public void Integration_HotelLegsService_NightsCalculatorMethod_YearDiff_HappyPath()
+        {
+            HUBRequest hubRequest = new HUBRequest()
+            {
+                hotelId = 1,
+                checkIn = "2022-1-12",
+                checkOut = "2023-1-12",
+                numberOfGuests = 3,
+                numberOfRooms = 1,
+                currency = "EUR"
+            };
+
+            var _hotelLegsService = new HotelLegsService();
+
+
+            var result = _hotelLegsService.NightsCalculator(hubRequest);
+
+            Assert.IsNotNull(result);
+            Assert.AreEqual(result, 365);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Integration_HotelLegsService_NightsCalculatorMethod_NullHUBRequest_BadPath()
+        {
+            var _hotelLegsService = new HotelLegsService();
+
+
+            var result = _hotelLegsService.NightsCalculator(FixtureData.hubRequest_Null);
+        }
+
+        [TestMethod]
+        public void Integration_HotelLegsService_RequestHUBtoHotelLegsMethod_HappyPath()
+        {
+            var _hotelLegsService = new HotelLegsService();
+
+            var result = _hotelLegsService.RequestHUBtoHotelLegs(FixtureData.hubRequest);
+
+            Assert.IsNotNull(result);
+            Assert.IsInstanceOfType(result, typeof(HotelLegsRequest));
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void Integration_HotelLegsService_RequestHUBtoHotelLegsMethod_BadPath()
+        {
+            var _hotelLegsService = new HotelLegsService();
+
+            var result = _hotelLegsService.RequestHUBtoHotelLegs(FixtureData.hubRequest_Null);
         }
     }
 }
