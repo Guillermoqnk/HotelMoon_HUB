@@ -11,8 +11,11 @@ namespace HotelMoonHUB.Application.Services
 {
     public class Service : IService
     {
-        public async Task<HUBReponse> Search(HUBRequest request)
+        public async Task<HUBReponse?> Search(HUBRequest request)
         {
+            if(request == null)
+                throw new ArgumentNullException(nameof(request));
+
             HUBReponse reponse = new HUBReponse();
 
             foreach(IProviderService service in Providers.ProvidersList)

@@ -9,5 +9,5 @@ public class HotelLegsRequest : IBaseRequest
     public int numberOfNights { get; set; }
     public int guests { get; set; }
     public int rooms { get; set; }
-    public string currency { get; set; }
+    public string? currency { get; set; }
 }

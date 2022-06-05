@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.Infrastructure
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelmoonHUB.Application.Dtos", "HotelmoonHUB.Application.Dtos\HotelmoonHUB.Application.Dtos.csproj", "{27C63342-7508-4957-A632-A6E90DB6FC70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.WebAPI.Services", "HotelMoonHUB.WebAPI.Services\HotelMoonHUB.WebAPI.Services.csproj", "{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelMoonHUB.WebAPI.Services", "HotelMoonHUB.WebAPI.Services\HotelMoonHUB.WebAPI.Services.csproj", "{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Application.ServicesTests", "HotelMoonHUB.Application.ServicesTests\HotelMoonHUB.Application.ServicesTests.csproj", "{4E7DC76F-0CE6-462D-8153-E610D3A186BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelMoonHUB.Application.ServicesTests", "HotelMoonHUB.Application.ServicesTests\HotelMoonHUB.Application.ServicesTests.csproj", "{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +49,10 @@ Global
 		{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{236FC561-C7E2-4C2F-BBEB-2DC2A540B654}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4E7DC76F-0CE6-462D-8153-E610D3A186BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E7DC76F-0CE6-462D-8153-E610D3A186BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E7DC76F-0CE6-462D-8153-E610D3A186BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E7DC76F-0CE6-462D-8153-E610D3A186BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB485C9-92A7-43D3-B3AF-935A1E4DC3B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
