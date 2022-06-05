@@ -9,6 +9,7 @@ namespace HotelMoonHUB.WebAPI.Services.Controllers
     [Route("api/[controller]")]
 
     [ApiController]
+    [ApiVersion("1.0")]
     public class HotelMoonController : ControllerBase
     {
         private readonly IService _service;
