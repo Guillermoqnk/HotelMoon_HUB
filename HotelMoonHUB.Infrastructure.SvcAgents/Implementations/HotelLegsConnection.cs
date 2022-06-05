@@ -14,9 +14,10 @@ namespace HotelMoonHUB.Infrastructure.SvcAgents
         {
             //Here the request would be sent and we return the reponse
 
-            return hotelLegsReponse;
+            return hotelLegsReponse; //This is an example for the execution
         }
 
+        #region Example_Execution
         public HotelLegsReponse hotelLegsReponse = new HotelLegsReponse()
         {
             results = new Result[]
@@ -50,5 +51,6 @@ namespace HotelMoonHUB.Infrastructure.SvcAgents
             canCancel = false,
             price = 143
         };
+        #endregion
     }
 }

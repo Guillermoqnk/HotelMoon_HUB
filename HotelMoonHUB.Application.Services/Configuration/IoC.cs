@@ -10,8 +10,7 @@ namespace HotelMoonHUB.Application.Services.Configuration
     {
         public static IServiceCollection AddDependency(this IServiceCollection services)
         {
-            services.AddTransient<IHotelLegsService, HotelLegsService>();
-            services.AddTransient<IHotelLegsConnection, HotelLegsConnection>();
+            services.AddScoped<IHotelLegsConnection, HotelLegsConnection>();
 
             return services;
         }

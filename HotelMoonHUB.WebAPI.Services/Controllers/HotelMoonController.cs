@@ -11,9 +11,9 @@ namespace HotelMoonHUB.WebAPI.Services.Controllers
     [ApiController]
     public class HotelMoonController : ControllerBase
     {
-        private readonly Service _service;
+        private readonly IService _service;
 
-        public HotelMoonController(Service service)
+        public HotelMoonController(IService service)
         {
             _service = service;
         }

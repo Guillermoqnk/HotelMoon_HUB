@@ -13,14 +13,16 @@ namespace HotelMoonHUB.Application.Services.Implementations
     {
         private readonly IHotelLegsConnection _hotelLegsConnection;
 
-        public HotelLegsService()
-        {
-            Providers.ProvidersList.Add(this);
-        }
+
 
         public HotelLegsService(IHotelLegsConnection hotelLegsConnection)
         {
             _hotelLegsConnection = hotelLegsConnection;
+        }
+
+        private void AddToList()
+        {
+            Providers.ProvidersList.Add(this);
         }
 
         public async Task<HUBReponse> Search(HUBRequest request , HUBReponse hubReponse)
@@ -52,7 +54,6 @@ namespace HotelMoonHUB.Application.Services.Implementations
                     };
 
                     hubRooms.Add(newRoom);
-
                     room = newRoom;
                 }
 
