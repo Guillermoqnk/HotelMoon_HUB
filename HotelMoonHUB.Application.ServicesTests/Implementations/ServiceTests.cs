@@ -1,15 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using HotelMoonHUB.Application.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Moq;
-using HotelMoonHUB.Application.Services.Contracts;
-using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
 using HotelMoonHUB.Application.Services.Implementations;
-using HotelMoonHUB.Infrastructure.SvcAgents;
 
 namespace HotelMoonHUB.Application.Services.ApplicationTests
 {

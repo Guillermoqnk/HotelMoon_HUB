@@ -1,6 +1,4 @@
-﻿using HotelMoonHUB.Application.Services.Contracts;
-using HotelMoonHUB.Application.Services.Implementations;
-using HotelMoonHUB.Infrastructure.SvcAgents;
+﻿using HotelMoonHUB.Infrastructure.SvcAgents;
 using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
 using Microsoft.Extensions.DependencyInjection;
 

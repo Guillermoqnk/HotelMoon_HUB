@@ -1,6 +1,4 @@
-﻿using HotelmoonHUB.Domain.Entities;
-
-namespace HotelMoonHUB.Application.Services.Contracts
+﻿namespace HotelMoonHUB.Application.Services.Contracts
 {
     public interface IProviderService
     {

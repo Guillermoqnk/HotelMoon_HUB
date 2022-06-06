@@ -1,12 +1,5 @@
-﻿using HotelmoonHUB.Domain.Entities;
-using HotelMoonHUB.Application.Services.Contracts;
+﻿using HotelMoonHUB.Application.Services.Contracts;
 using HotelMoonHUB.Infrastructure.SvcAgents;
-using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelMoonHUB.Application.Services.Implementations
 {

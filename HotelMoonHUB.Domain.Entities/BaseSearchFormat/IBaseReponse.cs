@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HotelmoonHUB.Domain.Entities
+﻿namespace HotelmoonHUB.Domain.Entities
 {
     public interface IBaseReponse
     {

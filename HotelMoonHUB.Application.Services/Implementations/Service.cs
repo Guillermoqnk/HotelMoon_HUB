@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HotelMoonHUB.Application.Services.Configuration.FluentValidations;
+﻿using HotelMoonHUB.Application.Services.Configuration.FluentValidations;
 using HotelMoonHUB.Application.Services.Contracts;
-using HotelMoonHUB.Application.Services.Implementations;
-using HotelMoonHUB.Infrastructure.SvcAgents;
-using HotelMoonHUB.Infrastructure.SvcAgents.Contracts;
-using FluentValidation;
 using FluentValidation.Results;
 
 namespace HotelMoonHUB.Application.Services
