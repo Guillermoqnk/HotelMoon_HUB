@@ -135,34 +135,34 @@ the program format them into a common format and send it as the reponse of the r
 
 ## Getting Started
 
-This application has been made with visual Studio.
+This application has been made with Visual Studio with *.Net Core*.
 
 ###Versions
 
 Folowing are the versions i used to made this program:
 
-	* .Net Core: 6
-	* Fluent Validations: 11.0.2
-	* Moq: 4.18.1
-	* Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer: 5.0.0
+* .Net Core: 6
+* Fluent Validations: 11.0.2
+* Moq: 4.18.1
+* Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer: 5.0.0
 	
 ### Dependencies
 
 This program uses the following librarys from the Nuget admin:
-    * AutoMapper.Extensions.Microsoft.DependencyInjection
-    * Microsoft.NET.Test.Sdk
-    * Moq
-    * MSTest.TestAdapter
-    * MSTest.TestFramework
-	* FluentValidation
-	* FluentValidation.AspNetCore
+* AutoMapper.Extensions.Microsoft.DependencyInjection
+* Microsoft.NET.Test.Sdk
+* Moq
+* MSTest.TestAdapter
+* MSTest.TestFramework
+* FluentValidation
+* FluentValidation.AspNetCore
 
 ### Executing program
 
 * How to run the program
 * Step-by-step bullets
-    -Play the program
-    -Execute diferent functions in the Swagger
+    * Play the program
+    * Execute diferent functions in the Swagger
 
 ### Conventions:
 
@@ -197,16 +197,16 @@ There's so much casuistics I would loved to controll with fluent validantions, f
 ## Future Imporvements
 
 Here are some little improvement I thought that would made this app better:
-	*Add more Fluent Validations
-	*Substitute the Providers List into a DataBase
-	*Add custom exceptions
+* Add more Fluent Validations
+* Substitute the Providers List into a DataBase
+* Add custom exceptions
 
 ## Authors
 
 Contributors names and contact info
 
-	* Guillermo Cuenca Fornelio 
-		** [@Wyllink](https://wylli.itch.io/).
+* Guillermo Cuenca Fornelio 
+	* [@Wyllink](https://wylli.itch.io/).
 
 ## Version History
 * 1.0
