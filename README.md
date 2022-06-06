@@ -140,10 +140,11 @@ This application has been made with visual Studio.
 ###Versions
 
 Folowing are the versions i used to made this program:
-*.Net Core: 6
-*Fluent Validations: 11.0.2
-*Moq: 4.18.1
-*Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer: 5.0.0
+
+	*.Net Core: 6
+	*Fluent Validations: 11.0.2
+	*Moq: 4.18.1
+	*Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer: 5.0.0
 
 ###Proyect Architecture
 
@@ -171,15 +172,17 @@ This program uses the following librarys from the Nuget admin:
 
 This program has been made following the next conventions: SOLID, KIS and CleanCode.
 
-## Software
+## Codification
+
+Here are some specifications over the code:
 
 ###Architecture
 
-This program architecture is based in N-Layered Domain Oriented Architecture(more information here: https://usermanual.wiki/Pdf/NLayeredDomainOrientedArchitectureGuidewith20NET40.1411532101.pdf) 
+This program architecture is based in N-Layered Domain Oriented Architecture(more information here: https://usermanual.wiki/Pdf/NLayeredDomainOrientedArchitectureGuidewith20NET40.1411532101.pdf) .
 
 ####Scheme of HUB API service:
 
-![](HUB_Arquitecture.png)
+![](HUB_Architecture.png)
 
 In this application I decided not to do a CrossCutting layer at this version because it would be useless.
 
@@ -198,16 +201,16 @@ There's so much casuistics I would loved to controll with fluent validantions, f
 ## Future Imporvements
 
 Here are some little improvement I thought that would made this app better:
-*Add more Fluent Validations
-*Substitute the Providers List into a DataBase
-*Add custom exceptions
+	*Add more Fluent Validations
+	*Substitute the Providers List into a DataBase
+	*Add custom exceptions
 
 ## Authors
 
 Contributors names and contact info
 
-*Guillermo Cuenca Fornelio 
-**[@Wyllink](https://wylli.itch.io/).
+	*Guillermo Cuenca Fornelio 
+		**[@Wyllink](https://wylli.itch.io/).
 
 ## Version History
 * 1.0
